@@ -12,7 +12,12 @@ class StockTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('stock',function(Blueprint $table){
+            $table->increments('id');
+            $table->string('name');
+            $table->increments('qty');
+        });
+
     }
 
     /**

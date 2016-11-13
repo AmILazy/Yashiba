@@ -14,9 +14,15 @@ class ItemTable extends Migration
     {
 
         Schema::create('item',function (Blueprint $table){
-            $table->string('name')->default(null);
-
-
+            $table->increments('id');
+            $table->string('category');
+            $table->float('cost');
+            $table->float('price');
+            $table->double('qty');
+            $table->boolean('isPayed');
+            $table->string('description')->default(null);
+            $table->date('date');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +33,6 @@ class ItemTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('item');
     }
 }

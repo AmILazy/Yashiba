@@ -15,12 +15,17 @@ class CustomerTable extends Migration
         Schema::create('customer',function(Blueprint $table){
             $table->increments('id');
             $table->string('company')->default(null);
-            $table->string('Fname')->default(null);
-            $table->string('Lname')->default(null);
-            $table->string('reg_date')->default(null);
+            $table->string('fname')->default(null);
+            $table->string('lname')->default(null);
+            $table->string('registeredNo')->default(null);
+            $table->string('registerDate')->default(null);
             $table->date('dob')->default(null);
-            $table->string('mobile');
-            $table->date('added_date');
+            $table->string('email')->default(null);
+            $table->string('city');
+            $table->string('postal')->default(null);
+            $table->string('country');
+            $table->boolean('terminated')->default(0);
+            $table->timestamps();
         });
     }
 
@@ -31,6 +36,6 @@ class CustomerTable extends Migration
      */
     public function down()
     {
-        schema::drop('customer');
+        Schema::drop('customer');
     }
 }
