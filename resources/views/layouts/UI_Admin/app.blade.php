@@ -62,10 +62,10 @@
                     <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Menu</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li class="active"><a href="/home">Home</a></li>
-                        <li><a href="#">Inventory</a></li>
-                        <li><a href="#">Dispatch</a></li>
-                        <li><a href="#">Orders</a></li>
-                        <li><a href="#">Stock</a></li>
+                        <li><a href="/system/inventory">Inventory</a></li>
+                        <li><a href="/system/dispatch">Dispatch</a></li>
+                        <li><a href="/system/orders">Orders</a></li>
+                        <li><a href="/system/stock">Stock</a></li>
 
                     </ul>
                 </li><!-- /Main item -->

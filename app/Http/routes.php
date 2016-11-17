@@ -20,6 +20,21 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-// System Route
-Route::get('/system',['middleware'=>'auth','uses'=>'System\systemController@index']);
 
+/**
+ * System Routers Group From here
+ */
+Route::group(['middleware'=>'auth'],function(){
+
+    //System Inventory Route
+    Route::resource('system/inventory','System\Inventory\InventoryController');
+    //System Dispatch
+    Route::resource('system/dispatch','System\Dispatch\DispatchController');
+    //System Orders Route
+    Route::resource('system/orders','System\Orders\OrdersController');
+    //System Stock Route
+    Route::resource('/system/stock','System\Stock\StockController');
+    //System Route
+    Route::resource('/system','System\systemController');
+
+});

@@ -12,7 +12,15 @@ class CustomerItemTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('customer_item',function(Blueprint $table){
+            $table->integer('customer_id')->unsigned();
+            $table->integer('item_id')->unsigned();
+            $table->float('Spec_price');
+            $table->dateTime('date');
+            $table->timestamps();
+            $table->foreign('customer_id')->references('id')->on('customer')->onDelete('cascade');
+            $table->foreign('item_id')->references('id')->on('item')->onDelete('cascade');
+        });
     }
 
     /**
@@ -22,6 +30,6 @@ class CustomerItemTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('customer_item');
     }
 }

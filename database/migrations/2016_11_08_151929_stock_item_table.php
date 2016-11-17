@@ -12,7 +12,12 @@ class StockItemTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('stock_item',function(Blueprint $table){
+            $table->integer('item_id')->unsigned();
+            $table->integer('stock_id')->unsigned();
+            $table->foreign('item_id')->references('id')->on('item')->onDelte('cascade');
+            $table->foreign('stock_id')->references('id')->on('stock')->onDelete('cascade');
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class StockItemTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('stock_item');
     }
 }

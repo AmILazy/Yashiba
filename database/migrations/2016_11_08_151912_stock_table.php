@@ -14,8 +14,12 @@ class StockTable extends Migration
     {
         Schema::create('stock',function(Blueprint $table){
             $table->increments('id');
+            $table->integer('item_id')->unsigned();
             $table->string('name');
-            $table->increments('qty');
+            $table->float('qty');
+            $table->date('date');
+            $table->timestamps();
+            $table->foreign('item_id')->references('id')->on('item')->onDelete('cascade');
         });
 
     }
@@ -27,6 +31,6 @@ class StockTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('stock');
     }
 }
