@@ -20,6 +20,10 @@
     {!! Html::style('css/animate.css') !!}
     <!-- style css -->
     {!! Html::style('css/style.css') !!}
+    <!-- main css -->
+    {!! Html::style('css/main.css') !!}
+    <!-- Data Table -->
+    {!! Html::style('css/plugins/dataTables/datatables.min.css') !!}
 
 
 </head>
@@ -59,9 +63,10 @@
 
                 <!-- Main item -->
                 <li class="active">
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Menu</span> <span class="fa arrow"></span></a>
+                    <a href="/system"><i class="fa fa-th-large"></i> <span class="nav-label">Menu</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li class="active"><a href="/home">Home</a></li>
+                        <li class="active"><a href="/system">Home</a></li>
+                        <li><a href="/system/customer">Customer</a></li>
                         <li><a href="/system/inventory">Inventory</a></li>
                         <li><a href="/system/dispatch">Dispatch</a></li>
                         <li><a href="/system/orders">Orders</a></li>
@@ -125,64 +130,45 @@
         @yield('content')
 
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="wrapper wrapper-content">
-                    <div class="row">
-                    </div>
-                    <div class="footer">
-                        <div class="pull-right">
-                            10GB of <strong>250GB</strong> Free.
-                        </div>
-                        <div>
-                            <strong>Copyright</strong> Example Company &copy; 2014-2017
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
     </div><!-- /page-wrapper -->
 </div><!-- page-wrapper -->
 
 <!-- Mainly scripts -->
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+{!! Html::script('js/jquery-2.1.1.js') !!}
+{!! Html::script('js/bootstrap.min.js') !!}
+{!! Html::script('js/plugins/metisMenu/jquery.metisMenu.js') !!}
+{!! Html::script('js/plugins/slimscroll/jquery.slimscroll.min.js') !!}
 
 <!-- Flot -->
-<script src="js/plugins/flot/jquery.flot.js"></script>
-<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.spline.js"></script>
-<script src="js/plugins/flot/jquery.flot.resize.js"></script>
-<script src="js/plugins/flot/jquery.flot.pie.js"></script>
-
+{!! Html::script('js/plugins/flot/jquery.flot.js') !!}
+{!! Html::script('js/plugins/flot/jquery.flot.tooltip.min.js') !!}
+{!! Html::script('js/plugins/flot/jquery.flot.spline.js') !!}
+{!! Html::script('js/plugins/flot/jquery.flot.resize.js') !!}
+{!! Html::script('js/plugins/flot/jquery.flot.pie.js') !!}
 <!-- Peity -->
-<script src="js/plugins/peity/jquery.peity.min.js"></script>
-<script src="js/demo/peity-demo.js"></script>
+{!! Html::script('js/plugins/peity/jquery.peity.min.js') !!}
+{!! Html::script('js/demo/peity-demo.js') !!}
 
 <!-- Custom and plugin javascript -->
-<script src="js/inspinia.js"></script>
-<script src="js/plugins/pace/pace.min.js"></script>
+{!! Html::script('js/inspinia.js') !!}
+{!! Html::script('js/plugins/pace/pace.min.js') !!}
 
 <!-- jQuery UI -->
-<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+{!! Html::script('js/plugins/jquery-ui/jquery-ui.min.js') !!}
 
 <!-- GITTER -->
-<script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+{!! Html::script('js/plugins/gritter/jquery.gritter.min.js') !!}
 
 <!-- Sparkline -->
-<script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+{!! Html::script('js/plugins/sparkline/jquery.sparkline.min.js') !!}
 
 <!-- Sparkline demo data  -->
-<script src="js/demo/sparkline-demo.js"></script>
-
-<!-- ChartJS-->
-<script src="js/plugins/chartJs/Chart.min.js"></script>
-
+{!! Html::script('js/demo/sparkline-demo.js') !!}
 <!-- Toastr -->
-<script src="js/plugins/toastr/toastr.min.js"></script>
+{!! Html::script('js/plugins/toastr/toastr.min.js') !!}
+
+@yield('js')
 
 </body>
 </html>

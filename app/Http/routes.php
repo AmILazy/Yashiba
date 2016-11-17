@@ -26,6 +26,8 @@ Route::get('/home', 'HomeController@index');
  */
 Route::group(['middleware'=>'auth'],function(){
 
+    //System Customer Route
+    Route::resource('system/customer','System\Customer\CustomerController');
     //System Inventory Route
     Route::resource('system/inventory','System\Inventory\InventoryController');
     //System Dispatch
