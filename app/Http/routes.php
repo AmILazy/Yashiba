@@ -25,7 +25,6 @@ Route::get('/home', 'HomeController@index');
  * System Routers Group From here
  */
 Route::group(['middleware'=>'auth'],function(){
-
     //System Customer Route
     Route::resource('system/customer','System\Customer\CustomerController');
     //System Inventory Route
@@ -36,6 +35,8 @@ Route::group(['middleware'=>'auth'],function(){
     Route::resource('system/orders','System\Orders\OrdersController');
     //System Stock Route
     Route::resource('/system/stock','System\Stock\StockController');
+    //System Item Route
+    Route::resource('/system/item','System\Item\ItemController');
     //System Route
     Route::resource('/system','System\systemController');
 

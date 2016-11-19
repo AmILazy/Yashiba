@@ -15,13 +15,11 @@ class ItemTable extends Migration
 
         Schema::create('item',function (Blueprint $table){
             $table->increments('id');
-            $table->string('category');
+            $table->string('code');
+            $table->string('name');
             $table->float('cost');
-            $table->float('price');
-            $table->double('qty');
-            $table->boolean('isPayed');
-            $table->string('description')->default(null);
             $table->date('date');
+            $table->string('description')->default(null);
             $table->timestamps();
         });
     }

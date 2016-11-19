@@ -1,13 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\System\Customer;
+namespace App\Http\Controllers\System\Item;
 
+use App\Models\Item\Item;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Flash;
+use Carbon\Carbon;
+use DB;
+use Redirect;
 
-class CustomerController extends Controller
+
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +22,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        echo 'customer controller';
+        //
     }
 
     /**
@@ -26,7 +32,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('System.Customer.create');
+        return view('System.Item.create');
     }
 
     /**
@@ -37,7 +43,20 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Functional Validation
+        $this->validate($request, [
+            'code' => 'required',
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'date' => 'required',
+        ]);
+
+        $item = Item::create([
+            'name'=> $request->name,
+            'cost'=> $request->price,
+            'date'=> $request->date
+        ]);
+
     }
 
     /**
