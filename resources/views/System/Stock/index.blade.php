@@ -13,10 +13,11 @@
             </ol>
         </div>
         <div class="col-md-12 col-sm-6 sub-menu product-box">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="m-t">
-                    <a href="#" class="btn btn-ms btn-outline btn-primary" title="Add New Item" >Add <i class="fa fa-plus"></i> </a>
-                    <a href="#" class="btn btn-ms btn-outline btn-primary">View<i class="fa fa-long-arrow-right"></i> </a>
+                    <a href="/system" class="btn btn-ms btn-outline btn-primary" title="Go Back" >Back <i class="fa fa-long-arrow-left"></i> </a>
+                    <a href="/system/stock/create" class="btn btn-ms btn-outline btn-primary" title="Add new stock item">New Stock <i class="fa fa-plus"></i> </a>
+                    <a href="/system/item/create" class="btn btn-ms btn-outline btn-primary" title="Add New Item" >New Item <i class="fa fa-plus"></i> </a>
                 </div>
             </div>
         </div><!-- Submenu -->
